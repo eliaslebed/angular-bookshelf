@@ -12,3 +12,13 @@
   
   1. There is a fake REST API with [json server](https://github.com/typicode/json-server) run it with ```json-server db.json --routes routes.json --no-cors``` pipeline
   2. That's all what you need
+  
+🚀 Project requirements:
+  
+  [✅]: View with list of available books
+  [✅]: View with list of authors
+  [✅]: Author view
+  [✅]: Book view
+  [🙄]: Genre view
+  [🙄]: Content search
+  
