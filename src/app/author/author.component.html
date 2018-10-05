@@ -1,0 +1,9 @@
+<div *ngIf="(author | async) as a; else loading">
+  {{a.name}}
+  {{a.bio}}
+  {{a.bookIds}}
+</div>
+
+<ng-template #loading>
+  Loading...
+</ng-template>
