@@ -1,0 +1,58 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Book01",
+      "description": "Description01",
+      "author": {
+        "id": 1,
+        "name": "Name01"
+      },
+      "genre": {
+        "id": 1,
+        "name": "Genre01"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Book02",
+      "description": "Description02",
+      "author": {
+        "id": 1,
+        "name": "Name02"
+      },
+      "genre": {
+        "id": 1,
+        "name": "Genre02"
+      }
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "name": "Author01",
+      "bookIds": [
+        1
+      ],
+      "bio": "Bio01"
+    },
+    {
+      "id": 2,
+      "name": "Author02",
+      "bookIds": [
+        2
+      ],
+      "bio": "Bio02"
+    }
+  ],
+  "genres": [
+    {
+      "id": 1,
+      "name": "Classic"
+    },
+    {
+      "id": 2,
+      "name": "Detective"
+    }
+  ]
+}

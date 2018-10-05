@@ -1,0 +1,3 @@
+{
+	"author/books": "/books?authorId=:id"
+}
