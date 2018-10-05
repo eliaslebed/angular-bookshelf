@@ -9,9 +9,9 @@
   4. That's all what you need
 
 🚀 Guideline Server:
-  
-  1. There is a fake REST API with [json server](https://github.com/typicode/json-server) run it with ```json-server db.json --routes routes.json --no-cors``` pipeline
-  2. That's all what you need
+  1. In cloned repository open root folder, then in terminal run ```cd mockserver```
+  2. There is a fake REST API with [json server](https://github.com/typicode/json-server) run it with ```json-server db.json --routes routes.json --no-cors``` pipeline
+  3. That's all what you need
   
 🚀 Project requirements:
   
