@@ -1,5 +1,6 @@
 <div class="book__list">
-  <div *ngFor="let book of books">
-    {{book.author}}
+  <div *ngFor="let book of books | async">
+    <a [routerLink]="['/book', book.id]" routerLinkActive="active">{{book.title}}</a>
+    {{book.author.name}}
   </div>
 </div>

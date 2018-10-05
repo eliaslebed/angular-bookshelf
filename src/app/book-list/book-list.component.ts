@@ -10,14 +10,13 @@ import { BookService } from '../book.service';
 })
 export class BookListComponent implements OnInit {
 
-  public books? = [];
+  books: Observable<Book[]>;
 
   constructor(private bookService: BookService) {
   }
 
   ngOnInit() {
-    const array = this.bookService.getBooks();
-    console.log(array);
+    this.books = this.bookService.getAllBooks();
   }
 
 }

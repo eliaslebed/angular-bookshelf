@@ -12,10 +12,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RouterModule, Routes } from '@angular/router';
 import { BookService } from './book.service';
+import { AuthorListComponent } from './author-list/author-list.component';
+import { GenreComponent } from './genre/genre.component';
 
 const appRoutes: Routes = [
   { path: '', component: BookListComponent },
-  { path: 'book', component: BookComponent },
+  { path: 'book/:bookId', component: BookComponent },
   { path: 'author', component: AuthorComponent }
 ];
 
@@ -25,7 +27,9 @@ const appRoutes: Routes = [
     SearchComponent,
     BookListComponent,
     AuthorComponent,
-    BookComponent
+    BookComponent,
+    AuthorListComponent,
+    GenreComponent
   ],
   imports: [
     BrowserModule,
