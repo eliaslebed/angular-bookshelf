@@ -3,7 +3,7 @@ import { BookService } from '../book.service';
 import { Book } from '../models/book';
 import { Observable } from 'rxjs/internal/Observable';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
-import { filter, switchMap } from 'rxjs/operators';
+import { filter, switchMap, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-book',
@@ -21,6 +21,7 @@ export class BookComponent implements OnInit {
       filter(p => p.has('bookId')),
       switchMap(p => this.bookService.getBookById(Number(p.get('bookId'))))
     );
+
   };
 
   ngOnInit() {

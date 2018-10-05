@@ -19,7 +19,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 const appRoutes: Routes = [
   { path: '', component: BookListComponent },
   { path: 'book/:bookId', component: BookComponent },
-  { path: 'author/:id', component: AuthorComponent }
+  { path: 'author/:authorId', component: AuthorComponent }
 ];
 
 @NgModule({

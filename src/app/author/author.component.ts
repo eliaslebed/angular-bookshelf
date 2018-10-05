@@ -24,7 +24,6 @@ export class AuthorComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.author = this.authorService.getAuthorById(1);
   }
 
 }

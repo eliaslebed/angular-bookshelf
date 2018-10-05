@@ -18,7 +18,7 @@
       "title": "Eloquent JavaScript: A Modern Introduction to Programming",
       "description": "Completely revised and updated, this best-selling introduction to programming in JavaScript focuses on writing real applications. Eloquent JavaScript dives into the JavaScript language to show programmers how to write elegant, effective JavaScript code",
       "author": {
-        "id": 1,
+        "id": 2,
         "name": "Marijn Haverbeke"
       },
       "genre": {
