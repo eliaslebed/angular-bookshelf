@@ -1,7 +1,7 @@
 # Angular Bookshelf
 ### Gettings started
 
-Guideline
+Guideline:
 
   1. Clone repository itself via ```git clone [repository link]``` in your prefirable terminal or download with **.zip** format
   2. Install dependencies rather with ```yarn``` or ```npm install``` (```npm i```)
