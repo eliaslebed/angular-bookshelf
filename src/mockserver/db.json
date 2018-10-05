@@ -2,57 +2,57 @@
   "books": [
     {
       "id": 1,
-      "title": "Book01",
-      "description": "Description01",
+      "title": "JavaScript: The Definitive Guide",
+      "description": "JavaScript was written to give readers an accurate, concise examination of JavaScript objects and their supporting nuances, such as complex values, primitive values, scope, inheritance, the head object, and more",
       "author": {
         "id": 1,
-        "name": "Name01"
+        "name": "David Flanagan"
       },
       "genre": {
         "id": 1,
-        "name": "Genre01"
+        "name": "Programming"
       }
     },
     {
       "id": 2,
-      "title": "Book02",
-      "description": "Description02",
+      "title": "Eloquent JavaScript: A Modern Introduction to Programming",
+      "description": "Completely revised and updated, this best-selling introduction to programming in JavaScript focuses on writing real applications. Eloquent JavaScript dives into the JavaScript language to show programmers how to write elegant, effective JavaScript code",
       "author": {
         "id": 1,
-        "name": "Name02"
+        "name": "Marijn Haverbeke"
       },
       "genre": {
         "id": 1,
-        "name": "Genre02"
+        "name": "Programming"
       }
     }
   ],
   "authors": [
     {
       "id": 1,
-      "name": "Author01",
+      "name": "David Flanagan",
       "bookIds": [
         1
       ],
-      "bio": "Bio01"
+      "bio": "David Flanagan graduated from the Massachusetts Institute of Technology. He is a consulting computer programmer, user interface designer and trainer. His books include X Toolkit Intrinsics Reference Manual and Motif Tools: Streamlined GUI Design and Programming with the Xmt Library."
     },
     {
       "id": 2,
-      "name": "Author02",
+      "name": "Marijn Haverbeke",
       "bookIds": [
         2
       ],
-      "bio": "Bio02"
+      "bio": "Marijn Haverbeke is a programming language enthusiast and polyglot. He's worked on a wide range of software systems, from databases to compilers to editors. He runs a small business around his open source projects."
     }
   ],
   "genres": [
     {
       "id": 1,
-      "name": "Classic"
+      "name": "Programming"
     },
     {
       "id": 2,
-      "name": "Detective"
+      "name": "Science"
     }
   ]
 }

@@ -7,3 +7,17 @@ body {
 .bold {
   font-weight: bold;
 }
+
+.book__list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  padding: 1rem;
+  min-height: 250px;
+  box-shadow: 15px 15px 5px;
+}
+
+.book__author {
+  margin-top: auto;
+  margin-left: auto;
+}

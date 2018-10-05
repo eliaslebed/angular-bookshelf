@@ -14,11 +14,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { BookService } from './book.service';
 import { AuthorListComponent } from './author-list/author-list.component';
 import { GenreComponent } from './genre/genre.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const appRoutes: Routes = [
   { path: '', component: BookListComponent },
   { path: 'book/:bookId', component: BookComponent },
-  { path: 'author', component: AuthorComponent }
+  { path: 'author/:id', component: AuthorComponent }
 ];
 
 @NgModule({
@@ -29,7 +30,7 @@ const appRoutes: Routes = [
     AuthorComponent,
     BookComponent,
     AuthorListComponent,
-    GenreComponent
+    GenreComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +38,8 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
-    )
+    ),
+    NgbModule
   ],
   providers: [BookService],
   bootstrap: [AppComponent]

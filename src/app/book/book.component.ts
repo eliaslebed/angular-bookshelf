@@ -11,6 +11,7 @@ import { filter, switchMap } from 'rxjs/operators';
   styleUrls: ['./book.component.css']
 })
 export class BookComponent implements OnInit {
+
   book: Observable<Book>;
 
   constructor(private router: Router,
