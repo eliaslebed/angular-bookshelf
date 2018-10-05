@@ -15,10 +15,10 @@
   
 🚀 Project requirements:
   
-  [✅]: View with list of available books
-  [✅]: View with list of authors
-  [✅]: Author view
-  [✅]: Book view
-  [🙄]: Genre view
-  [🙄]: Content search
+  * [✅]: View with list of available books
+  * [✅]: View with list of authors
+  * [✅]: Author view
+  * [✅]: Book view
+  * [🙄]: Genre view
+  * [🙄]: Content search
   
