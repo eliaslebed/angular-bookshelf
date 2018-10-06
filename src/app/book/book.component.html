@@ -1,10 +1,11 @@
 <div class="row">
   <div class="col-6" *ngIf="(book | async) as b; else loading">
-    <div class="book">
-      <div>Title: <span class="bold">{{b.title}}</span></div>
-      <div>Author: <a [routerLink]="['/author', b.author.id]" routerLinkActive="active" class="bold">{{b.author.name}}</a></div>
-      <div>Genre: <span class="bold">{{b.genre.name}}</span></div>
-      <div>Description: <span class="bold">{{b.description}}</span></div>
+    <div class="book paper">
+      <div><span class="bold">Title: </span>{{b.title}}</div>
+      <div><span class="bold">Author: </span><a [routerLink]="['/author', b.author.id]" routerLinkActive="active">{{b.author.name}}</a>
+      </div>
+      <div><span class="bold">Genre: </span>{{b.genre.name}}</div>
+      <div><span class="bold">Description: </span>{{b.description}}</div>
     </div>
 
     <ng-template #loading>

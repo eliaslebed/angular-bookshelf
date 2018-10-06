@@ -1,7 +1,9 @@
-<div *ngIf="(author | async) as a; else loading">
-  {{a.name}}
-  {{a.bio}}
-  {{a.bookIds}}
+<div class="row">
+  <div class="col-6 paper" *ngIf="(author | async) as a; else loading">
+    <div class="author__name"><span class="bold">Author:</span> {{a.name}}</div>
+    <div class="author__bio"><span class="bold">Bio:</span> {{a.bio}}</div>
+    <div class="author__books"><span class="bold">Books:</span> {{a.bookIds}}</div>
+  </div>
 </div>
 
 <ng-template #loading>
