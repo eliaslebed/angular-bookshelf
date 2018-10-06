@@ -14,6 +14,8 @@
   3. That's all what you need
   
 🚀 Project requirements:
+
+  [requirements itself](https://gist.github.com/geksilla/72a0cb882d2b7d8b4336)
   
   * ✅: View with list of available books
   * ✅: View with list of authors
