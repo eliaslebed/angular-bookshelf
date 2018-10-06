@@ -55,3 +55,12 @@ body {
   top: 10px;
   z-index: -2;
 }
+
+.back {
+  position: fixed;
+  top: .5rem;
+  left: .5rem;
+  font-size: 34px;
+  font-weight: 200;
+  cursor: pointer;
+}

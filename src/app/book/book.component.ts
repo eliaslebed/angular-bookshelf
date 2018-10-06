@@ -4,6 +4,7 @@ import { Book } from '../models/book';
 import { Observable } from 'rxjs/internal/Observable';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { filter, switchMap, tap } from 'rxjs/operators';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-book',
@@ -16,6 +17,7 @@ export class BookComponent implements OnInit {
 
   constructor(private router: Router,
               private route: ActivatedRoute,
+              private location: Location,
               private bookService: BookService) {
     this.book = route.paramMap.pipe(
       filter(p => p.has('bookId')),
@@ -23,6 +25,10 @@ export class BookComponent implements OnInit {
     );
 
   };
+
+  routeBack() {
+    this.location.back();
+  }
 
   ngOnInit() {
   }
