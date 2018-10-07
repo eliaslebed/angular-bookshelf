@@ -1,3 +1,4 @@
 {
-	"author/books": "/books?authorId=:id"
+	"/books/authorId/:id": "/books?author.id=:id",
+  "/books/genreId/:id": "/books?genre.id=:id"
 }

@@ -22,8 +22,8 @@
         "name": "Marijn Haverbeke"
       },
       "genre": {
-        "id": 1,
-        "name": "Programming"
+        "id": 2,
+        "name": "Computer Science"
       }
     }
   ],
@@ -52,7 +52,7 @@
     },
     {
       "id": 2,
-      "name": "Science"
+      "name": "Computer Scienceee23213123213"
     }
   ]
 }

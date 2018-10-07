@@ -4,7 +4,7 @@
       <div><span class="bold">Title: </span>{{b.title}}</div>
       <div><span class="bold">Author: </span><a [routerLink]="['/author', b.author.id]" routerLinkActive="active">{{b.author.name}}</a>
       </div>
-      <div><span class="bold">Genre: </span>{{b.genre.name}}</div>
+      <div><span class="bold">Genre: </span><a [routerLink]="['/genre', b.genre.id]" routerLinkActive="active">{{b.genre.name}}</a></div>
       <div><span class="bold">Description: </span>{{b.description}}</div>
     </div>
 
