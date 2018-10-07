@@ -1,3 +1,11 @@
-<p>
-  genre works!
-</p>
+<div class="row">
+  <h1 *ngIf="(genre | async) as g;">{{g.name}}:</h1>
+</div>
+<div class="row">
+  <div class="col-3" *ngFor="let book of books | async">
+    <div class="book__list paper">
+      <a [routerLink]="['/book', book.id]" routerLinkActive="active">{{book.title}}</a>
+      <a [routerLink]="['/author', book.author.id]" class="book__author">{{book.author.name}}</a>
+    </div>
+  </div>
+</div>
