@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@ng-select/ng-select/themes/default.theme.css";
 
 body {
   padding: 2rem;
@@ -21,6 +22,14 @@ body {
   margin-left: auto;
 }
 
+.book__search {
+  margin: 2rem 0;
+}
+
+.ng-select .ng-select-container {
+  border-radius: 0;
+}
+
 .paper {
   background-color: #fff;
   position: relative;
@@ -30,7 +39,7 @@ body {
 .paper,
 .paper::before,
 .paper::after {
-  box-shadow: 2px 1px 1px rgba(0,0,0,0.15);
+  box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
 .paper::before,
@@ -63,4 +72,8 @@ body {
   font-size: 34px;
   font-weight: 200;
   cursor: pointer;
+}
+
+.book__title {
+  margin-top: 1rem;
 }

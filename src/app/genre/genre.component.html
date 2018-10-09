@@ -1,11 +1,15 @@
 <div class="row">
-  <h1 *ngIf="(genre | async) as g;">{{g.name}}:</h1>
+  <div class="col-12">
+    <h1 class="book__title" *ngIf="(genre | async) as g;">{{g.name}}:</h1>
+  </div>
 </div>
 <div class="row">
   <div class="col-3" *ngFor="let book of books | async">
     <div class="book__list paper">
       <a [routerLink]="['/book', book.id]" routerLinkActive="active">{{book.title}}</a>
-      <a [routerLink]="['/author', book.author.id]" class="book__author">{{book.author.name}}</a>
+      <a [routerLink]="['/author', book.author.id]" routerLinkActive="active" class="book__author">{{book.author.name}}</a>
     </div>
   </div>
+
+  <div class="back" (click)="routeBack()">←</div>
 </div>

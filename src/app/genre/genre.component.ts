@@ -5,6 +5,7 @@ import { BookService } from '../book.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { filter, map, switchMap } from 'rxjs/operators';
 import { Genre } from '../models/genre';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-genre',
@@ -18,6 +19,7 @@ export class GenreComponent implements OnInit {
 
   constructor(private bookService: BookService,
               private router: Router,
+              private location: Location,
               private route: ActivatedRoute) {
   }
 
@@ -34,6 +36,10 @@ export class GenreComponent implements OnInit {
     this.books = genreId.pipe(
       switchMap(x => this.bookService.getBooksByGenre(x))
     );
+  }
+
+  routeBack() {
+    this.location.back();
   }
 
 }

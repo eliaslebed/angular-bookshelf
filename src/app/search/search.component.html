@@ -1,1 +1,9 @@
+<ng-select [items]="result$ | async"
+           bindLabel="title"
+           [typeahead]="searchTerms"
+           class="book__search">
+  <ng-template ng-option-tmp let-item="item">
+    {{item.title}}
+  </ng-template>
+</ng-select>
 

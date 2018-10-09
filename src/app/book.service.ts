@@ -3,16 +3,21 @@ import { Book } from './models/book';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import { Author } from './models/author';
-import { filter, map, tap } from 'rxjs/operators';
+import { catchError, map, tap } from 'rxjs/operators';
+import { of } from 'rxjs/internal/observable/of';
+import { Genre } from './models/genre';
 
 @Injectable()
 export class BookService {
   private API_PATH = 'http://localhost:3000';
-  public query = '';
-  public searchThreshold = 2;
+
+  public static searchIsEmpty(searchTerm: string) {
+    if (searchTerm && !searchTerm.trim()) {
+      return of([]);
+    }
+  }
 
   constructor(private http: HttpClient) {
-
   }
 
   getAllBooks() {
@@ -35,9 +40,32 @@ export class BookService {
     return this.http.get<Author>(`${this.API_PATH}/genres/${genreId}`);
   }
 
-  searchBooks(queryTitle: string) {
-    this.query = queryTitle;
-    this.http.get(`${this.API_PATH}?q=${this.query}&_limit=${this.searchThreshold}`)
-      .pipe(map((book) => book));
+  searchBooksByTitle(searchTerm: string) {
+    BookService.searchIsEmpty(searchTerm);
+
+    return this.http.get<Book[]>(`${this.API_PATH}/books/?q=${searchTerm}`).pipe(
+      tap(_ => console.log(`books with matching ${searchTerm} searching term`))
+    );
   }
+
+  searchBooksByGenre(searchTerm: string) {
+    BookService.searchIsEmpty(searchTerm);
+
+    return this.http.get<Genre[]>(`${this.API_PATH}/genres/?q=${searchTerm}`).pipe(
+      tap(_ => console.log(`books with matching ${searchTerm} searching term`))
+    );
+  }
+
+  searchBooksByAuthor(searchTerm: string) {
+    BookService.searchIsEmpty(searchTerm);
+
+    return this.http.get<Author[]>(`${this.API_PATH}/authors/?q=${searchTerm}`).pipe(
+      tap(_ => console.log(`books with matching ${searchTerm} searching term`))
+    );
+  }
+
+  //
+  // searchBooks(searchTerm: string): Observable<any> {
+  //   return this.http.get(`${this.API_PATH}?q=${searchTerm}`);
+  // }
 }
