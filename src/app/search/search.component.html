@@ -1,11 +1,11 @@
 <ng-select [items]="result$ | async"
            bindLabel="title"
+           groupBy="type"
            [typeahead]="searchTerms"
+           (change)="moveToRoute($event)"
            class="book__search">
-  <ng-template ng-option-tmp
-               let-item="item">
-    <small>{{item.type}}</small>
-    <a [routerLink]="[item.url]">{{item.title}}</a>
+  <ng-template let-item="item">
+    <a [routerLink]="[item.url]">{{item.type}}</a>
   </ng-template>
 </ng-select>
 

@@ -6,6 +6,8 @@ import { Subject } from 'rxjs/internal/Subject';
 import { concat } from 'rxjs/internal/observable/concat';
 import { SearchItem } from '../models/search';
 import { merge } from 'rxjs/internal/observable/merge';
+import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -22,7 +24,11 @@ export class SearchComponent implements OnInit {
   observableArray = [this.author, this.books, this.genre];
   private searchTerms = new Subject<string>();
 
-  constructor(private bookService: BookService) {
+  constructor(private bookService: BookService, private router: Router) {
+  }
+
+  moveToRoute(e) {
+    this.router.navigate([e.url]);
   }
 
   ngOnInit() {
