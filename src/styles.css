@@ -77,3 +77,13 @@ body {
 .book__title {
   margin-top: 1rem;
 }
+
+.ng-dropdown-panel.ng-select-bottom .ng-dropdown-panel-items .ng-option {
+  display: flex;
+  flex-direction: column;
+}
+
+.ng-dropdown-panel.ng-select-bottom .ng-dropdown-panel-items .ng-option small {
+  font-weight: bold;
+  margin-bottom: .5rem;
+}

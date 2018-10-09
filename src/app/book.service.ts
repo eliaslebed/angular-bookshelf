@@ -40,7 +40,7 @@ export class BookService {
     return this.http.get<Author>(`${this.API_PATH}/genres/${genreId}`);
   }
 
-  searchBooksByTitle(searchTerm: string) {
+  searchBooksByTitle(searchTerm: string): Observable<Book[]> {
     BookService.searchIsEmpty(searchTerm);
 
     return this.http.get<Book[]>(`${this.API_PATH}/books/?q=${searchTerm}`).pipe(
@@ -48,7 +48,7 @@ export class BookService {
     );
   }
 
-  searchBooksByGenre(searchTerm: string) {
+  searchBooksByGenre(searchTerm: string): Observable<Genre[]> {
     BookService.searchIsEmpty(searchTerm);
 
     return this.http.get<Genre[]>(`${this.API_PATH}/genres/?q=${searchTerm}`).pipe(
@@ -56,7 +56,7 @@ export class BookService {
     );
   }
 
-  searchBooksByAuthor(searchTerm: string) {
+  searchBooksByAuthor(searchTerm: string): Observable<Author[]> {
     BookService.searchIsEmpty(searchTerm);
 
     return this.http.get<Author[]>(`${this.API_PATH}/authors/?q=${searchTerm}`).pipe(

@@ -2,9 +2,9 @@
   <div class="col-6" *ngIf="(book | async) as b; else loading">
     <div class="book paper">
       <div><span class="bold">Title: </span>{{b.title}}</div>
-      <div><span class="bold">Author: </span><a [routerLink]="['/author', b.author.id]" routerLinkActive="active">{{b.author.name}}</a>
+      <div><span class="bold">Author: </span><a [routerLink]="['/authors', b.author.id]" routerLinkActive="active">{{b.author.name}}</a>
       </div>
-      <div><span class="bold">Genre: </span><a [routerLink]="['/genre', b.genre.id]" routerLinkActive="active">{{b.genre.name}}</a></div>
+      <div><span class="bold">Genre: </span><a [routerLink]="['/genres', b.genre.id]" routerLinkActive="active">{{b.genre.name}}</a></div>
       <div><span class="bold">Description: </span>{{b.description}}</div>
     </div>
 

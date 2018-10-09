@@ -19,9 +19,9 @@ import { NgSelectModule } from '@ng-select/ng-select';
 
 const appRoutes: Routes = [
   { path: '', component: BookListComponent },
-  { path: 'book/:bookId', component: BookComponent },
-  { path: 'author/:authorId', component: AuthorComponent },
-  { path: 'genre/:genreId', component: GenreComponent }
+  { path: 'books/:bookId', component: BookComponent },
+  { path: 'authors/:authorId', component: AuthorComponent },
+  { path: 'genres/:genreId', component: GenreComponent }
 ];
 
 @NgModule({

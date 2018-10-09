@@ -2,8 +2,10 @@
            bindLabel="title"
            [typeahead]="searchTerms"
            class="book__search">
-  <ng-template ng-option-tmp let-item="item">
-    {{item.title}}
+  <ng-template ng-option-tmp
+               let-item="item">
+    <small>{{item.type}}</small>
+    <a [routerLink]="[item.url]">{{item.title}}</a>
   </ng-template>
 </ng-select>
 

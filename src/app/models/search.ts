@@ -1,4 +1,5 @@
 export interface SearchItem {
-  label: string;
+  title: string;
   url: string;
+  type: string;
 }
